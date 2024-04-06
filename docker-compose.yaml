@@ -1,0 +1,43 @@
+version: '3.9'
+services:
+  service:
+    build:
+      context: .
+      dockerfile: ./service/ServiceDockerfile
+    container_name: sbv2
+    tty: true
+    ports:
+      - '7860:7860/tcp'
+      - '8000:8000/tcp'
+    shm_size: '4gb'
+    network_mode: 'host'
+    environment:
+      gpus: 'all'
+    command: $SBV2_START_CMD
+    volumes:
+      - ./volumes/Data:/volumes/Data
+      - ./volumes/inputs:/volumes/inputs
+      - ./volumes/model_assets:/volumes/model_assets
+      - ./volumes/slm:/volumes/slm
+      - ./volumes/bert:/volumes/bert
+    logging:
+      options:
+        max-size: '200k'
+        max-file: '10'
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+
+  front:
+    build:
+      context: .
+      dockerfile: ./service/FrontDockerfile
+    container_name: sbv2-editor
+    network_mode: 'host'
+    command: 'npm run dev'
+    logging:
+      options:
+        max-size: '200k'
+        max-file: '10'

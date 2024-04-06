@@ -4,11 +4,11 @@
 * NVidia video card (RTX3060 12GB)
 * WSL2 (32GB and operation confirmed on Ubuntu 20.04)
 
-*上記以外の構成では未確認.
+*Not confirmed in other configurations than those listed above.
 
 ### Installing
 
-* 以下のコマンドでDockerをビルド.
+* Build Docker with the following command
 ```
 chmod +x ./shell/*
 docker compose build
@@ -16,26 +16,27 @@ docker compose build
 
 ## Usage
 
-* Installing実行後に以下を実行.
+* Access the following after docker compose start shell
 ```
-#web-uiを使用して起動したい場合...
+#If you want to start web-ui...
 ./shell/webui_start.sh
-#docker compose 起動シェル後に以下にアクセス.
+#Access the following after starting the process
 http://localhost:7860
 
-#api-serverを使用して起動したい場合...
+#If you want to start api-server...
 ./shell/server_start.sh
-#docker compose 起動シェル後に以下にアクセス.
+#Access the following after starting the process
 http://localhost:3000
 ```
 
-* ディレクトリ概要.
+* Directory description
+#If you need reinitialize then delete → [check].
 ```
-#もし初期化処理を実行したいのであればこれを削除 → [check].
 volumes/Data
-        └── check #実行時に起動するshellの初期化処理で作成されます.
-
-#音声合成に必要なモデルファイルたちの構造は以下の通りです.
+        └── check #make it when initialize.
+```
+#The structure of the model files required for voice 
+```
 volumes/model_assets
     ├── your_model
     │   ├── config.json
