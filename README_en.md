@@ -54,6 +54,7 @@ volumes/model_assets
 
 ## Acknowledgments
 
+* [Style-Bert-VITS2](https://github.com/litagin02/Style-Bert-VITS2)
 * [Style-Bert-VITS2-Editor](https://github.com/litagin02/Style-Bert-VITS2-Editor)
 * [nVidia 525 + Cuda 11.8 + Python 3.10 + pyTorch GPU Docker image](https://dev.to/ordigital/nvidia-525-cuda-118-python-310-pytorch-gpu-docker-image-1l4a)
 * [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) 
