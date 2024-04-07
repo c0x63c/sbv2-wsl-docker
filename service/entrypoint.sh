@@ -9,6 +9,8 @@ MOUNTS["/sbv2/Data"]="/volumes/Data"
 MOUNTS["/sbv2/inputs"]="/volumes/inputs"
 MOUNTS["/sbv2/slm/wavlm-base-plus"]="/volumes/slm/wavlm-base-plus"
 MOUNTS["/sbv2/bert"]="/volumes/bert"
+MOUNTS["/sbv2/pretrained"]="/volumes/pretrained"
+MOUNTS["/sbv2/pretrained_jp_extra"]="/volumes/pretrained_jp_extra"
 
 # make symbolik link and copy target dir under the files.
 for to_path in "${!MOUNTS[@]}"; do

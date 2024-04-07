@@ -20,6 +20,8 @@ services:
       - ./volumes/model_assets:/volumes/model_assets
       - ./volumes/slm:/volumes/slm
       - ./volumes/bert:/volumes/bert
+      - ./volumes/pretrained:/volumes/pretrained
+      - ./volumes/pretrained_jp_extra:/volumes/pretrained_jp_extra
     logging:
       options:
         max-size: '200k'
