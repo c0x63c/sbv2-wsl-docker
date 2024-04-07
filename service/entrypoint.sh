@@ -34,8 +34,8 @@ if [ ! -e "/sbv2/Data/check" ]; then
   # TODO: If an argument that does not use cache is added in initialize.py then remove it
   sed -i 's@hf_hub_download("microsoft/wavlm-base-plus", file, local_dir=local_path)@hf_hub_download("microsoft/wavlm-base-plus", file, local_dir=local_path, local_dir_use_symlinks=False)@' initialize.py
   sed -i 's/hf_hub_download(v\["repo_id"\], file, local_dir=local_path)/hf_hub_download(v\["repo_id"\], file, local_dir=local_path, local_dir_use_symlinks=False)/g' initialize.py
-  sed -i '/Style-Bert-VITS2-1.0-base/{a , local_dir_use_symlinks=False}' initialize.py
-  sed -i '/Style-Bert-VITS2-2.0-base-JP-Extra/{a , local_dir_use_symlinks=False}' initialize.py
+  sed -i '/Style-Bert-VITS2-1.0-base/a , local_dir_use_symlinks=False' initialize.py
+  sed -i '/Style-Bert-VITS2-2.0-base-JP-Extra/a , local_dir_use_symlinks=False' initialize.py
   # output check file
   echo "this file using only initialize check. if you want to run initialize.py remove this." > /sbv2/Data/check
   # exec initialize
