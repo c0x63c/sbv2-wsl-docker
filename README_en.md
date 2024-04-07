@@ -50,7 +50,7 @@ volumes/model_assets
 
 ## Version
 
-* 2024/04/06
+* 2024/04/07 fix:Added libcudnn8,replaced local_dir_use_symlinks
 
 ## Acknowledgments
 

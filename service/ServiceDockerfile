@@ -5,7 +5,7 @@ ENV PYTHONUNBUFFERED=1
 # system
 # python3
 RUN apt update -y -q && DEBIAN_FRONTEND=noninteractive apt install -y -q --no-install-recommends \
-    git python3.10 pip libgl1-mesa-dev ffmpeg \
+    git python3.10 pip libgl1-mesa-dev ffmpeg libcudnn8=8.8.1.3-1+cuda11.8 \
     && ln -s /usr/bin/python3 /usr/bin/python \
     && rm -rf /var/lib/apt/lists/*
 
