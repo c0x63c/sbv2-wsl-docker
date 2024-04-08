@@ -24,7 +24,7 @@ docker compose build
 * Installing実行後に以下を実行.
 ```
 #WEB-UIを使用して起動したい場合...
-./shell/webui.sh
+./shell/web-ui.sh
 #docker compose 起動シェル後に以下にアクセス.
 http://localhost:7860
 

@@ -24,12 +24,12 @@ docker compose build
 * Access the following after docker compose start shell
 ```
 #If you want to start web-ui...
-./shell/webui_start.sh
+./shell/web-ui.sh
 #Access the following after starting the process
 http://localhost:7860
 
 #If you want to start editor...
-./shell/server_start.sh
+./shell/editor.sh
 #Access the following after starting the process
 http://localhost:3000
 
