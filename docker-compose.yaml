@@ -9,6 +9,8 @@ services:
     ports:
       - '7860:7860/tcp'
       - '8000:8000/tcp'
+      - '6006:6006/tcp'
+      - '5000:5000/tcp'
     shm_size: '4gb'
     network_mode: 'host'
     environment:
@@ -17,6 +19,7 @@ services:
     volumes:
       - ./volumes/Data:/volumes/Data
       - ./volumes/inputs:/volumes/inputs
+      - ./volumes/configs:/volumes/configs
       - ./volumes/model_assets:/volumes/model_assets
       - ./volumes/slm:/volumes/slm
       - ./volumes/bert:/volumes/bert

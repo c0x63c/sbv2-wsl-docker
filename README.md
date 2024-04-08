@@ -1,3 +1,8 @@
+### Description
+* Style-Bert-VITS2のWSL2で向けdocker compose(GPU対応)です.
+* 特徴としては,volumes配下のフォルダはdocker内でシンボリックリンクとして扱われる為,ローカルのファイルをコピーする必要はありません.
+* shellにより,WEB-UIとエディタとAPIの起動を切り替えられます.
+
 ### Prerequisites
 
 * Windows 11(64GB)
@@ -18,15 +23,20 @@ docker compose build
 
 * Installing実行後に以下を実行.
 ```
-#web-uiを使用して起動したい場合...
-./shell/webui_start.sh
+#WEB-UIを使用して起動したい場合...
+./shell/webui.sh
 #docker compose 起動シェル後に以下にアクセス.
 http://localhost:7860
 
-#api-serverを使用して起動したい場合...
-./shell/server_start.sh
+#エディタを使用して起動したい場合...
+./shell/editor.sh
 #docker compose 起動シェル後に以下にアクセス.
 http://localhost:3000
+
+#APIを使用して起動したい場合...
+./shell/fastapi.sh
+#docker compose 起動シェル後に以下にアクセス.
+http://localhost:5000
 ```
 
 * ディレクトリ概要.
@@ -49,7 +59,7 @@ volumes/model_assets
 
 ## Version
 
-* 2024/04/07 fix:libcudnn8の追加,local_dir_use_symlinksの置き換えを追加,pretrainを追加
+* 2024/04/08 fix:fastapi起動shellの追加,shellの名称を変更,configsを追加
 
 ## Acknowledgments
 
