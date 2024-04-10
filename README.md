@@ -1,5 +1,5 @@
 ### Description
-* Style-Bert-VITS2のWSL2で向けdocker compose(GPU対応)です.
+* Style-Bert-VITS2のWSL2向けdocker compose(GPU対応)です.
 * 特徴としては,volumes配下のフォルダはdocker内でシンボリックリンクとして扱われる為,ローカルのファイルをコピーする必要はありません.
 * shellにより,WEB-UIとエディタとAPIの起動を切り替えられます.
 
