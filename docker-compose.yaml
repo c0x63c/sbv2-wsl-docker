@@ -3,7 +3,7 @@ services:
   service:
     build:
       context: .
-      dockerfile: ./service/ServiceDockerfile
+      dockerfile: ./service/service.Dockerfile
     container_name: sbv2
     tty: true
     ports:
@@ -38,7 +38,7 @@ services:
   front:
     build:
       context: .
-      dockerfile: ./service/FrontDockerfile
+      dockerfile: ./service/front.Dockerfile
     container_name: sbv2-editor
     network_mode: 'host'
     command: 'npm run dev'
