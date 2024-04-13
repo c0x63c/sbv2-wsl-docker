@@ -1,6 +1,6 @@
 ### Description
 * Style-Bert-VITS2のWSL2向けdocker compose(GPU対応)です.
-* 特徴としては,volumes配下のフォルダはdocker内でシンボリックリンクとして扱われる為,ローカルのファイルをコピーする必要はありません.
+* 特徴としては,volumes配下のフォルダはdocker内でシンボリックリンクとして扱われる為,ローカルのファイルをdocker内にいちいちコピーする必要はありません.
 * shellにより,WEB-UIとエディタとAPIの起動を切り替えられます.
 
 ### Prerequisites
@@ -59,7 +59,7 @@ volumes/model_assets
 
 ## Version
 
-* 2024/04/08 fix:fastapi起動shellの追加,shellの名称を変更,configsを追加
+* 2024/04/13 fix:editor起動時のブラウザ起動オプションを削除, dockerfileの名称を変更
 
 ## Acknowledgments
 

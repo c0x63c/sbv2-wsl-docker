@@ -1,6 +1,6 @@
 ### Description
 * Style-Bert-VITS2 is a docker compose (GPU support) for WSL2.
-* The feature is that folders under volumes are treated as symbolic links in docker, so you don't need to copy local files.
+* The feature is that folders under volumes are treated as symbolic links in docker, so there is no need to copy local files into docker.
 * The shell allows you to switch between WEB-UI, editor, and API.
 
 ### Prerequisites
@@ -60,7 +60,7 @@ volumes/model_assets
 
 ## Version
 
-* 2024/04/08 fix:Added fastapi startup shell, changed shell name, added configs
+* 024/04/13 fix:Removed browser startup option when starting editor, changed dockerfile name
 
 ## Acknowledgments
 
