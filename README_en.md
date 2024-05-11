@@ -2,6 +2,7 @@
 * Style-Bert-VITS2 is a docker compose (GPU support) for WSL2.
 * The feature is that folders under volumes are treated as symbolic links in docker, so there is no need to copy local files into docker.
 * The shell allows you to switch between WEB-UI, editor, and API.
+* Even if you do not use a GPU, you can use the WEB-UI for voice synthesis, but not for learning.
 
 ### Prerequisites
 
@@ -35,8 +36,13 @@ http://localhost:3000
 
 #If you want to start fastapi...
 ./shell/fastapi.sh
-#docker compose 起動シェル後に以下にアクセス.
+#Access the following after starting the process
 http://localhost:5000
+
+#If you want to start WEB-UI without GPU...
+./shell/cpu_web-ui.sh
+#Access the following after starting the process
+http://localhost:7860
 ```
 
 * Directory description

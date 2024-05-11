@@ -2,6 +2,7 @@
 * Style-Bert-VITS2のWSL2向けdocker compose(GPU対応)です.
 * 特徴としては,volumes配下のフォルダはdocker内でシンボリックリンクとして扱われる為,ローカルのファイルをdocker内にいちいちコピーする必要はありません.
 * shellにより,WEB-UIとエディタとAPIの起動を切り替えられます.
+* GPUを使用しない場合でも、音声の合成を行うためのWEB-UIが使用できます、学習はできません.
 
 ### Prerequisites
 
@@ -37,6 +38,11 @@ http://localhost:3000
 ./shell/fastapi.sh
 #docker compose 起動シェル後に以下にアクセス.
 http://localhost:5000
+
+#GPUを使用しないで、WEB-UIを起動したい場合...
+./shell/cpu_web-ui.sh
+#docker compose 起動シェル後に以下にアクセス.
+http://localhost:7860
 ```
 
 * ディレクトリ概要.
