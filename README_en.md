@@ -60,7 +60,7 @@ volumes/model_assets
 
 ## Version
 
-* 024/04/13 fix:Removed browser startup option when starting editor, changed dockerfile name
+* 2024/05/11 fix:add docker-compose for cpu, fix shell addition
 
 ## Acknowledgments
 

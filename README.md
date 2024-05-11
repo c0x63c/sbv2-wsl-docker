@@ -59,7 +59,7 @@ volumes/model_assets
 
 ## Version
 
-* 2024/04/13 fix:editor起動時のブラウザ起動オプションを削除, dockerfileの名称を変更
+* 2024/05/11 fix:cpu用のdocker-composeを追加、shellの追加修正
 
 ## Acknowledgments
 
