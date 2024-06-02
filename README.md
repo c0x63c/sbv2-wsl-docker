@@ -65,7 +65,7 @@ volumes/model_assets
 
 ## Version
 
-* 2024/05/11 fix:cpu用のdocker-composeを追加、shellの追加修正
+* 2024/06/02 fix:Version2.5.0対応
 
 ## Acknowledgments
 
