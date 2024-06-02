@@ -66,8 +66,7 @@ volumes/model_assets
 
 ## Version
 
-* 2024/05/11 fix:add docker-compose for cpu, fix shell addition
-
+* 2024/06/02 fix: Version 2.5.0 supported.
 ## Acknowledgments
 
 * [Style-Bert-VITS2](https://github.com/litagin02/Style-Bert-VITS2)
