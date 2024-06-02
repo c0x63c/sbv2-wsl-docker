@@ -10,4 +10,4 @@ RUN export GIT_SSL_NO_VERIFY=1 && git clone https://github.com/litagin02/Style-B
 
 # build
 WORKDIR /sbv2-editor
-RUN npm i && npm run build
+RUN npm config set update-notifier false && npm i && npm run build
