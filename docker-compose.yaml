@@ -4,6 +4,11 @@ services:
     build:
       context: .
       dockerfile: ./service/service.Dockerfile
+      args:
+        - UID
+        - GID
+        - USERNAME=docker
+        - GROUPNAME=docker
     container_name: sbv2
     tty: true
     ports:

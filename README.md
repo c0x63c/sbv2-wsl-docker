@@ -17,7 +17,7 @@
 * 以下のコマンドでDockerをビルド.
 ```
 chmod +x ./shell/*
-docker compose build
+docker compose build --build-arg UID="$(id -u)" --build-arg GID="$(id -g)" 
 ```
 
 ## Usage
@@ -65,7 +65,7 @@ volumes/model_assets
 
 ## Version
 
-* 2024/06/02 fix:Version2.5.0対応
+* 2024/06/17 fix:UID,GIDを指定するように変更.
 
 ## Acknowledgments
 
