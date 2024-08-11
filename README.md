@@ -1,8 +1,8 @@
 ### Description
-* Style-Bert-VITS2のWSL2向けdocker compose(GPU対応)です.
-* 特徴としては,volumes配下のフォルダはdocker内でシンボリックリンクとして扱われる為,ローカルのファイルをdocker内にいちいちコピーする必要はありません.
-* shellにより,WEB-UIとエディタとAPIの起動を切り替えられます.
-* GPUを使用しない場合でも、音声の合成を行うためのWEB-UIが使用できます、学習はできません.
+* Style-Bert-VITS2's docker compose for WSL2 (GPU support).
+* The feature is that folders under volumes are treated as symbolic links in docker, so there is no need to copy local files into docker.
+* The shell allows you to switch between WEB-UI, editor, and API.
+* Even if you do not use a GPU, you can use the WEB-UI for voice synthesis, but not for learning.
 
 ### Prerequisites
 
@@ -10,11 +10,11 @@
 * NVidia video card (RTX3060 12GB)
 * WSL2 (32GB and operation confirmed on Ubuntu 20.04)
 
-*上記以外の構成では未確認.
+*Not confirmed in other configurations than those listed above.
 
 ### Installing
 
-* 以下のコマンドでDockerをビルド.
+* Build Docker with the following command
 ```
 chmod +x ./shell/*
 docker compose build --build-arg UID="$(id -u)" --build-arg GID="$(id -g)" 
@@ -22,36 +22,37 @@ docker compose build --build-arg UID="$(id -u)" --build-arg GID="$(id -g)"
 
 ## Usage
 
-* Installing実行後に以下を実行.
+* Access the following after docker compose start shell
 ```
-#WEB-UIを使用して起動したい場合...
+#If you want to start web-ui...
 ./shell/web-ui.sh
-#docker compose 起動シェル後に以下にアクセス.
+#Access the following after starting the process
 http://localhost:7860
 
-#エディタを使用して起動したい場合...
+#If you want to start editor...
 ./shell/editor.sh
-#docker compose 起動シェル後に以下にアクセス.
+#Access the following after starting the process
 http://localhost:3000
 
-#APIを使用して起動したい場合...
+#If you want to start fastapi...
 ./shell/fastapi.sh
-#docker compose 起動シェル後に以下にアクセス.
+#Access the following after starting the process
 http://localhost:5000
 
-#GPUを使用しないで、WEB-UIを起動したい場合...
+#If you want to start WEB-UI without GPU...
 ./shell/cpu_web-ui.sh
-#docker compose 起動シェル後に以下にアクセス.
+#Access the following after starting the process
 http://localhost:7860
 ```
 
-* ディレクトリ概要.
+* Directory description
+#If you need reinitialize then delete → [check].
 ```
-#もし初期化処理を実行したいのであればこれを削除 → [check].
 volumes/Data
-        └── check #実行時に起動するshellの初期化処理で作成されます.
-
-#音声合成に必要なモデルファイルたちの構造は以下の通りです.
+        └── check #make it when initialize.
+```
+#The structure of the model files required for voice 
+```
 volumes/model_assets
     ├── your_model
     │   ├── config.json
@@ -65,7 +66,7 @@ volumes/model_assets
 
 ## Version
 
-* 2024/06/17 fix:UID,GIDを指定するように変更.
+* 2024/08/12 fix: Remove version.
 
 ## Acknowledgments
 
