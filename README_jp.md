@@ -65,7 +65,7 @@ volumes/model_assets
 
 ## Version
 
-* 2024/08/12 fix: Remove version.
+* 2024/09/05 fix: downした後にupで起動しなくなるバグを修正
 
 ## Acknowledgments
 

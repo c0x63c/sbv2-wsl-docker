@@ -66,7 +66,7 @@ volumes/model_assets
 
 ## Version
 
-* 2024/08/12 fix: Remove version.
+* 2024/09/05 fix: Fixed a bug that prevented up from starting after down.
 
 ## Acknowledgments
 
